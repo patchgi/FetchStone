@@ -3,16 +3,16 @@
 # Python2.X encoding wrapper (Windows dedicated processing)
 import codecs
 import sys
-import random
 import time
+
 sys.stdout = codecs.getwriter('cp932')(sys.stdout)
 turn =True
 LIMIT=21
 stone=LIMIT
 def canFetch(_num):
-	if _num>3:
-		return False
-	return True
+	if _num<4 and _num>0:
+		return True
+	return False
 
 
 def fetch(_num):
